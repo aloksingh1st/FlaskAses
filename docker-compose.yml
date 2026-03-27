@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: devpass
+      POSTGRES_DB: customers_db
+    ports:
+      - "5433:5432"
+
+  pipeline:
+    build: ./pipeline-services
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://dev:devpass@db:5432/customers_db
+
+  mock-server:
+    build: ./mock-server
+    ports:
+      - "5000:5000"
