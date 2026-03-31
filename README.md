@@ -74,7 +74,7 @@ project-root/
 ### Step 1: Start all services
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ---
@@ -86,9 +86,18 @@ Sometimes images or dependencies may not be pulled properly.
 Try this:
 
 ```bash
-docker-compose pull
-docker-compose up --build
+docker compose pull
+docker compose up --build
 ```
+
+Sometimes Python creates an issue and is not pulled properly 
+
+Please try this 
+```bash
+docker pull python:3.10-slim
+docker compose up --build
+```
+
 
 ---
 
@@ -159,7 +168,7 @@ curl http://localhost:8000/api/customers/C001
 
 ## ✅ Submission Checklist
 
-* [x] All services run using `docker-compose up --build`
+* [x] All services run using `docker compose up --build`
 * [x] Flask API working with pagination
 * [x] FastAPI ingestion working
 * [x] PostgreSQL storing data correctly
