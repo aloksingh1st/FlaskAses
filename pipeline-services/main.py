@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from database import SessionLocal
 from services.ingestion import ingest_data
+from fastapi import Query
 import time
 
 time.sleep(10)
@@ -49,3 +50,17 @@ def get_customers(page: int = Query(1), limit: int = Query(10)):
         "page": page,
         "limit": limit
     }
+
+
+@app.get("/api/customers/{customer_id}")
+def get_customer(customer_id: str):
+    db = SessionLocal()
+
+    customer = db.query(Customer).filter_by(customer_id=customer_id).first()
+
+    db.close()
+
+    if not customer:
+        return {"error": "Customer not found"}, 404
+
+    return customer
