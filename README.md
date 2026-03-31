@@ -178,7 +178,7 @@ curl http://localhost:8000/api/customers/C001
 
 ## Author
 
-Backend Developer Assessment Submission
-ALOK SINGH
-9335929565
-https://github.com/aloksingh1st# FlaskAses
+* Backend Developer Assessment Submission
+* ALOK SINGH
+* 9335929565
+* https://github.com/aloksingh1st# FlaskAses
