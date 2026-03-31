@@ -1,6 +1,6 @@
 # Backend Data Pipeline Assessment
 
-## 🚀 Overview
+## Overview
 
 This project implements a simple data pipeline using three services:
 
@@ -13,7 +13,7 @@ Flask API → FastAPI ingestion → PostgreSQL → API responses
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 project-root/
@@ -35,7 +35,7 @@ project-root/
 
 ---
 
-## ⚙️ Services
+## Services
 
 ### 1. Flask Mock Server (Port 5000)
 
@@ -79,7 +79,7 @@ docker compose up --build
 
 ---
 
-### ⚠️ If build fails
+### If build fails
 
 Sometimes images or dependencies may not be pulled properly.
 
@@ -157,7 +157,7 @@ curl http://localhost:8000/api/customers/C001
 
 ---
 
-## 📌 Notes
+##  Notes
 
 * Flask loads data from JSON (not hardcoded)
 * FastAPI uses SQLAlchemy ORM
@@ -166,7 +166,7 @@ curl http://localhost:8000/api/customers/C001
 
 ---
 
-## ✅ Submission Checklist
+## Submission Checklist
 
 * [x] All services run using `docker compose up --build`
 * [x] Flask API working with pagination
@@ -176,7 +176,7 @@ curl http://localhost:8000/api/customers/C001
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Backend Developer Assessment Submission
 ALOK SINGH
